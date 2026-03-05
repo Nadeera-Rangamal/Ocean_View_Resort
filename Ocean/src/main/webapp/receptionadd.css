@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafc;
+}
+
+.main-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Side Navigation Panel --- */
+.side-nav-panel {
+    flex: 0 0 35%;
+    position: relative;
+    background-color: #0d2137;
+    overflow: hidden;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bg-img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.side-content {
+    position: relative;
+    z-index: 2;
+}
+
+.info-text h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    font-weight: 300;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+/* --- Admin Navigation --- */
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #e2e8f0;
+    padding: 15px 25px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    transform: translateX(10px);
+}
+
+.menu-item.active {
+    background: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+}
+
+.menu-item.exit {
+    margin-top: 20px;
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.menu-item.exit:hover {
+    background: #ef4444;
+}
+
+/* --- Form Panel --- */
+.form-panel {
+    flex: 1;
+    overflow-y: auto;
+    background: #f8fafc;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    background-color: #fdfdfd;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .main-wrapper { flex-direction: column; }
+    .side-nav-panel { flex: none; padding: 40px 20px; }
+    .admin-menu { flex-direction: row; flex-wrap: wrap; }
+    .menu-item { flex: 1; justify-content: center; }
+}
+
+@media (max-width: 576px) {
+    .admin-menu { flex-direction: column; }
+}

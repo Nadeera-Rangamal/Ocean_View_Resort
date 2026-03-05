@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f7f6;
+}
+
+.main-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Side Panel --- */
+.side-nav-panel {
+    flex: 0 0 35%;
+    position: relative;
+    background-color: #0b2c3d;
+    overflow: hidden;
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bg-img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    z-index: 1;
+}
+
+.side-content {
+    position: relative;
+    z-index: 2;
+}
+
+.info-text h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    font-weight: 300;
+    line-height: 1.8;
+    color: #a5b4bc;
+}
+
+/* --- Navigation --- */
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #cbd5e1;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateX(8px);
+}
+
+.menu-item.active {
+    background: #c5a059; /* Luxury Gold Tone */
+    border-color: #c5a059;
+    color: white;
+}
+
+.menu-item.exit:hover {
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+/* --- Form Panel --- */
+.form-panel {
+    flex: 1;
+    background: #fdfdfd;
+    overflow-y: auto;
+}
+
+.card {
+    border-radius: 20px;
+    background: #ffffff;
+}
+
+.card-title {
+    color: #0b2c3d;
+    font-weight: 600;
+}
+
+.form-control, .form-select {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+    border-color: #c5a059;
+}
+
+/* --- Image Preview --- */
+.image-preview-box {
+    width: 100%;
+    height: 220px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f8fafc;
+    color: #94a3b8;
+    transition: 0.3s;
+}
+
+.image-preview-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.image-preview-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.btn-primary {
+    background: #0b2c3d;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #c5a059;
+    transform: translateY(-2px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .main-wrapper { flex-direction: column; }
+    .side-nav-panel { flex: none; padding: 40px 20px; }
+    .admin-menu { flex-direction: row; flex-wrap: wrap; }
+    .menu-item { flex: 1; min-width: 150px; }
+}

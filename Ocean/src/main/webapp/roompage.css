@@ -1,0 +1,122 @@
+/* --- Global Styles --- */
+body {
+    background-color: #f8fafc;
+    font-family: 'Poppins', sans-serif;
+}
+
+.letter-spacing-2 { letter-spacing: 2px; }
+
+/* Divider */
+.custom-divider {
+    width: 60px;
+    height: 4px;
+    background: #0d6efd;
+    margin: 15px 0 25px 0;
+    border-radius: 10px;
+}
+
+/* --- Room Card --- */
+.room-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #ffffff;
+    height: 100%; /* Ensures card takes full height of column */
+}
+
+.room-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 22px 45px rgba(0,0,0,0.1) !important;
+}
+
+/* Image Container */
+.room-img-container {
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+.room-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s ease;
+}
+
+.room-card:hover .room-img {
+    transform: scale(1.1);
+}
+
+/* Price Tag */
+.price-tag {
+    position: absolute;
+    bottom: 20px; /* Moved to bottom-right for a cleaner look */
+    right: 20px;
+    background: rgba(13, 110, 253, 0.95);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 2;
+}
+
+.price-tag span {
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+/* Card Body Content Control */
+.card-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits description to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.bg-primary-soft {
+    background-color: rgba(13, 110, 253, 0.1);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Amenities */
+.amenities i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    color: #94a3b8;
+}
+
+.amenities i:hover {
+    color: #0d6efd;
+    transform: translateY(-3px);
+}
+
+/* Booking Button */
+.btn-booking {
+    border: 2px solid #0d6efd;
+    color: #0d6efd;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-booking:hover {
+    background-color: #0d6efd;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+}
+
+/* Empty State */
+.border-dashed {
+    border: 2px dashed #cbd5e1;
+    background-color: #fff;
+    border-radius: 30px;
+}

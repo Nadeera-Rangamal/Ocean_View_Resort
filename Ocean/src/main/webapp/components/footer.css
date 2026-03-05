@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+/* ===== FOOTER BASE ===== */
+.footer-wrapper {
+    background: linear-gradient(180deg, #f0f7fb, #e6f2f8);
+    color: #2c3e50;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-wrapper a {
+    text-decoration: none;
+}
+
+/* ===== LOGO & ABOUT ===== */
+.footer-logo {
+    max-height: 60px;
+}
+
+.about-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4f6d7a;
+}
+
+/* ===== WIDGET TITLES ===== */
+.widget_title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0b3c5d;
+    position: relative;
+}
+
+.widget_title::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #1ca9c9;
+    margin-top: 8px;
+}
+
+/* ===== FOOTER LINKS ===== */
+.footer-links {
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.footer-links li a {
+    color: #4f6d7a;
+    transition: all 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #1ca9c9;
+    letter-spacing: 0.5px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin: 0 6px;
+    border-radius: 50%;
+    background: #1ca9c9;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #0b3c5d;
+    transform: translateY(-3px);
+}
+
+/* ===== COPYRIGHT ===== */
+.copyright-wrap {
+    background: #0b3c5d;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.copyright-wrap p {
+    margin: 0;
+}
+
+.need-help-link {
+    color: #aee6f5;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.need-help-link:hover {
+    color: #ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+
+    .footer-wrapper {
+        text-align: center;
+    }
+
+    .widget_title::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-text {
+        font-size: 16px;
+        padding: 0 12px;
+    }
+
+    .footer-links li {
+        font-size: 16px;
+    }
+
+    .footer-social {
+        margin-top: 15px;
+    }
+
+    .copyright-wrap {
+        text-align: center;
+        padding: 18px 0;
+    }
+}

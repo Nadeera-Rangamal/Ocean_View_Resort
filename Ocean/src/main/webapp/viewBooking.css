@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* --- GENERAL RESET --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Poppins', sans-serif; background-color: #f4f7fe; color: #334155; line-height: 1.6; }
+
+/* --- SIDEBAR DESIGN --- */
+.sidebar {
+    width: 280px; background: #fff; height: 100vh; position: fixed; top: 0; left: 0;
+    border-right: 1px solid #e1e8ef; display: flex; flex-direction: column; padding: 30px 20px;
+    z-index: 2000; transition: transform 0.3s ease-in-out;
+}
+.sidebar-logo { width: 170px; margin: 0 auto 30px; display: block; }
+.close-sidebar { display: none; background: none; border: none; font-size: 22px; cursor: pointer; }
+
+.nav-links { display: flex; flex-direction: column; gap: 8px; flex-grow: 1; }
+.nav-item { display: flex; align-items: center; gap: 12px; padding: 12px 15px; text-decoration: none; border-radius: 12px; transition: 0.2s; }
+.nav-item:hover { background: #f8fbff; }
+.nav-item.active { background: #eef7ff; border-left: 4px solid #0077b6; }
+
+.icon-box { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.bg-blue { background: #eef7ff; color: #0077b6; }
+.bg-cyan { background: #eaffff; color: #00a8a8; }
+.bg-teal { background: #f0fffb; color: #00a388; }
+.bg-info { background: #f0faff; color: #00b4d8; }
+.bg-purple { background: #f5f3ff; color: #7c3aed; }
+.bg-danger { background: #fff1f1; color: #e63946; }
+
+.label-main { font-size: 14px; font-weight: 600; color: #333; display: block; }
+.label-sub { font-size: 11px; color: #888; display: block; }
+.nav-spacer { flex-grow: 1; }
+
+/* --- MAIN CONTENT --- */
+.main-content-area { margin-left: 280px; padding: 40px; min-height: 100vh; }
+.container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.02); }
+
+.header { margin-bottom: 30px; }
+.badge-new { background: #e0f2fe; color: #0ea5e9; padding: 4px 12px; border-radius: 50px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+.header h2 { font-size: 28px; color: #1e293b; margin-top: 10px; font-weight: 700; }
+.header p { color: #64748b; font-size: 14px; }
+
+/* --- TABLE DESIGN --- */
+.table-wrapper { overflow-x: auto; border-radius: 15px; border: 1px solid #e2e8f0; }
+table { width: 100%; border-collapse: collapse; text-align: left; min-width: 900px; }
+th { background: #f8fafc; padding: 16px; color: #64748b; font-weight: 600; font-size: 13px; text-transform: uppercase; border-bottom: 1px solid #e2e8f0; }
+td { padding: 16px; border-bottom: 1px solid #f1f5f9; font-size: 14px; color: #334155; }
+tr:hover { background-color: #f8fbff; }
+
+.room-cell span { background: #e67e22; color: white; padding: 4px 12px; border-radius: 6px; font-weight: 700; font-size: 12px; }
+.cancel-btn { background: #fee2e2; color: #ef4444; padding: 8px 14px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 13px; transition: 0.3s; }
+.cancel-btn:hover { background: #ef4444; color: #fff; }
+
+/* --- ALERTS --- */
+.alert { padding: 15px; border-radius: 12px; margin-bottom: 20px; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+.success { background: #dcfce7; color: #16a34a; border: 1px solid #bbf7d0; }
+.danger { background: #fee2e2; color: #ef4444; border: 1px solid #fecaca; }
+
+.no-data { text-align: center; padding: 50px !important; color: #94a3b8; }
+.no-data i { font-size: 40px; margin-bottom: 10px; display: block; }
+
+/* --- RESPONSIVE --- */
+.mobile-top-bar { display: none; background: #fff; padding: 12px 20px; align-items: center; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+.mobile-logo { height: 32px; }
+.hamburger-toggle { background: #f0f4ff; border: none; color: #0077b6; font-size: 22px; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+.sidebar-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1500; }
+
+@media (max-width: 992px) {
+    .sidebar { transform: translateX(-100%); }
+    .sidebar.open { transform: translateX(0); }
+    .close-sidebar { display: block; position: absolute; top: 20px; right: 20px; }
+    .mobile-top-bar { display: flex; }
+    .sidebar-overlay.show { display: block; }
+    .main-content-area { margin-left: 0; padding: 20px; }
+}

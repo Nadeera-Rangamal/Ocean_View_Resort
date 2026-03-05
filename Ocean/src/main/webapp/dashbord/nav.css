@@ -1,0 +1,116 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f5fbfd;
+    color: #0b2c3d;
+}
+
+/* ===== SIDE NAVIGATION ===== */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(135deg, #0b2c3d, #124b63);
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.nav-brand {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.side-menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.side-menu li {
+    width: 100%;
+}
+
+.side-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.side-menu li a i {
+    min-width: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.side-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Exit menu item */
+.side-menu li.exit a {
+    background: linear-gradient(135deg, #b02a37, #dc3545);
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    margin-left: 250px; /* space for side nav */
+    padding: 60px 40px;
+}
+
+/* Dashboard headings */
+.main-content h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.main-content .subtitle {
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .side-nav {
+        width: 200px;
+    }
+    .main-content {
+        margin-left: 200px;
+        padding: 50px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .side-nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}

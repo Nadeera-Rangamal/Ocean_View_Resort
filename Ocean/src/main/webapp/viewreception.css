@@ -1,0 +1,47 @@
+/* Table Styles */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border-top: none;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+    transition: 0.3s;
+}
+
+.badge {
+    padding: 8px 12px;
+    font-weight: 500;
+}
+
+.card {
+    border-radius: 15px;
+}
+
+/* Ensure side nav alignment */
+.main-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.side-nav-panel {
+    width: 350px; /* Adjust based on your current width */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.form-panel {
+    flex: 1;
+    background-color: #f4f7f6;
+}
+

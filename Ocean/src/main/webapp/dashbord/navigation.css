@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7f9;
+    color: #333;
+}
+
+/* --- Top Navigation --- */
+.top-nav {
+    background: #0b2c3d;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.logo i { color: #4fb3c7; margin-right: 10px; }
+
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 15px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.user-area:hover { background: rgba(255,255,255,0.2); }
+
+.user-info { text-align: right; }
+.user-info .role { display: block; font-size: 10px; text-transform: uppercase; color: #4fb3c7; }
+.user-info .username { font-size: 14px; font-weight: 500; }
+
+/* --- Dashboard Content --- */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.welcome-section {
+    background: linear-gradient(rgba(11, 44, 61, 0.8), rgba(11, 44, 61, 0.8)), url('../images/ocean.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    border-radius: 20px;
+    color: white;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.welcome-text h1 { margin: 0; font-size: 32px; }
+.welcome-text p { opacity: 0.9; max-width: 600px; line-height: 1.6; margin-top: 10px; }
+
+/* --- Menu Grid --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.menu-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: #eef7f9;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4fb3c7;
+    font-size: 24px;
+}
+
+.card-content h3 { margin: 0; font-size: 18px; color: #0b2c3d; }
+.card-content p { margin: 5px 0 0; font-size: 13px; color: #777; }
+
+/* Exit Card Special Style */
+.menu-card.exit .icon-box { background: #feecef; color: #dc3545; }
+.menu-card.exit:hover { background: #dc3545; }
+.menu-card.exit:hover .card-content h3, 
+.menu-card.exit:hover .card-content p { color: white; }
+
+/* --- Profile Modal --- */
+.user-modal {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    padding: 30px 20px;
+    z-index: 1000;
+    text-align: center;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.logout-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Image එක සහ අකුරු අතර පරතරය */
+}
+
+.logo-img {
+    height: 45px; /* ඔබේ logo එකේ ප්‍රමාණය අනුව මෙය වෙනස් කරගන්න */
+    width: auto;
+    object-fit: contain;
+    /* අවශ්‍ය නම් රවුම් හැඩයක් ලබා දීමට පහත පේළිය භාවිතා කරන්න */
+    /* border-radius: 50%; */
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff; /* Navigation bar එකේ වර්ණය අනුව මෙය වෙනස් කරන්න */
+}
